@@ -14,7 +14,29 @@ const connect = function () {
   conn.on("connect", () => {
     console.log("Successfully connected to game server.");
     conn.write("Name: SV");
+    //MOVE up in the original .on connect
+    /*setTimeout(() => {
+      conn.write("Move: up");
+
+    }, 1000);*/
+    
   });
+  //conn.on("connect", () => {
+//MOVE UP using setTimeout
+  /*setTimeout(() => {
+    conn.write("Move: up");
+  }, 50);
+  setTimeout(() => {
+    conn.write("Move: up");
+  }, 100);
+  setTimeout(() => {
+    conn.write("Move: up");
+  }, 150); */
+  //MOVE UP using setInterval
+  /*setInterval(() => {
+    conn.write("Move: up");
+  }, 50); */
+  //});
   conn.on("data", (data) => {
     console.log("Server Says:", data);
     // code that does something when the connection is first established
@@ -22,6 +44,7 @@ const connect = function () {
 
   return conn;
 };
+
 
 
 module.exports = {
