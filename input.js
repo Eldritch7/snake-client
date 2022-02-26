@@ -32,6 +32,18 @@ const handleUserInput = process.stdin.on('data', (key) => {
   } else if (key === "d" || key === "D") {
     //console.log("Move right!");
     connection.write("Move: right");
+  } else if (key === "z" || key === "Z") {
+    connection.write("Say: NOO");
+  } else if (key === "c" || key === "C") {
+    connection.write("Say: YES!");
+  } else if (key === "x" || key === "X") {
+    connection.write("Say: :(");
+  } else if (key === "q" || key === "Q") {
+    connection.write("Say: AHH");
+  } else if (key === "e" || key === "E") {
+    connection.write("Say: :D");
+  } else if (key === "r" || key === "R") {
+    connection.write("Say: Hey!");
   }
   
  
