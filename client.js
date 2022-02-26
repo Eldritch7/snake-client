@@ -11,6 +11,10 @@ const connect = function () {
 
   // interpret incoming data as text
   conn.setEncoding("utf8");
+  conn.on("connect", () => {
+    console.log("Successfully connected to game server.");
+    conn.write("Name: SV");
+  });
   conn.on("data", (data) => {
     console.log("Server Says:", data);
     // code that does something when the connection is first established
@@ -20,5 +24,7 @@ const connect = function () {
 };
 
 
-module.exports = {net,
-  connect};
+module.exports = {
+  net,
+  connect
+};
