@@ -24,13 +24,10 @@ const handleUserInput = process.stdin.on('data', (key) => {
     //console.log("Move up!");
     connection.write("Move: up");
   } else if (key === "s" || key === "S") {
-    //console.log("Move down!");
     connection.write("Move: down");
   } else if (key === "a" || key === "A") {
-    //console.log("Move left!");
     connection.write("Move: left");
   } else if (key === "d" || key === "D") {
-    //console.log("Move right!");
     connection.write("Move: right");
   } else if (key === "z" || key === "Z") {
     connection.write("Say: NOO");
@@ -51,5 +48,5 @@ const handleUserInput = process.stdin.on('data', (key) => {
 });
 
 module.exports = {
-setupInput
+  setupInput
 };
